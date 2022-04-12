@@ -4,6 +4,11 @@ export const FooterMain=styled.div`
 border-top: 1px solid #25C080;
 font-family: Manrope;
 padding:4.6rem 0;
+margin-top: 20rem;
+@media screen and (max-width:480px) {
+margin-top: 5rem;
+    
+}
 .footer-list{
  
     .list-item{

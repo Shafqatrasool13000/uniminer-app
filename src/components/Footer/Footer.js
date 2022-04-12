@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Nav, Row } from 'react-bootstrap'
+import { Col, Container,  Row } from 'react-bootstrap'
 import { FooterMain } from './StyledFooter';
 import logo from '../../assets/logo.svg';
 import facebook from '../../assets/facebook.svg';
@@ -13,13 +13,13 @@ const Footer = () => {
     return (
         <FooterMain>
             <Container>
-                <Row className='justify-content-between'>
-                    <Col sm={6} md={2}>
+                <Row >
+                    <Col md={3} lg={2}>
                         <div className="img-div">
                             <img src={logo} alt="logo" />
                         </div>
                     </Col>
-                    <Col sm={10} md={6}>
+                    <Col lg={7} md={9}>
                         <ul
                             className="footer-list mt-3 mt-md-0 p-0 d-flex flex-wrap justify-content-center justify-content-md-between"
                         >
@@ -30,7 +30,7 @@ const Footer = () => {
                             }
                         </ul>
                     </Col>
-                    <Col sm={6} md={4}>
+                    <Col md={6} lg={3}>
                         <div className="social-imgs d-flex mt-2 mt-sm-0 align-items-center justify-md-content-end flex-wrap">
                             {
                                 socialImgs.map((img, index) => (
