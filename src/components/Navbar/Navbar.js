@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavbarMainContainer } from './StyledNavbar';
 import profile from '../../assets/profile.svg';
 import logo from '../../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
 
 const Navbars = () => {
     return (
@@ -12,9 +13,11 @@ const Navbars = () => {
                 <Container fluid>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Brand href="#" className='text-white'>
+                        <NavLink to='/'>
                         <span className='fs-2'>
                         <img src={logo} alt="logo" />
                         </span>
+                        </NavLink>
                     </Navbar.Brand>
                     <Navbar.Brand href="#" className=' d-lg-none'>
                     <button className="order-btn  ">Pre Order</button>
@@ -27,7 +30,7 @@ const Navbars = () => {
                         >
                             <Nav.Link href="#action1">Miners</Nav.Link>
                             <Nav.Link href="#action2">Hosting </Nav.Link>
-                            <Nav.Link href="#action2">Cloud mining</Nav.Link>
+                            <NavLink className='nav-link' to="cloud-mining">Cloud mining</NavLink>
                             <Nav.Link href="#action2">Blog</Nav.Link>
                             <Nav.Link href="#action2">Token</Nav.Link>
                             <Nav.Link href="#action2">

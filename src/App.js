@@ -1,25 +1,17 @@
-import './App.css';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar/Navbar';
-import { BelowNav } from './components/BelowNav/BelowNav';
-import PaymentCards from './components/PaymentCards/PaymentCards';
-import Footer from './components/Footer/Footer';
-import PlanDetails from './components/PlanDetails/PlanDetails';
-import RevenueRate from './components/RevenueRate/RevenueRate';
-import Antiminer from './components/Antiminer/Antiminer';
-
+import Homepage from "./components/Homepage/Homepage";
+import CloudMining from "./components/CloudMining/CloudMining";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <BelowNav />
-      {/* <PaymentCards/> */}
-      {/* <PlanDetails/>
-      <RevenueRate/>
-      <Footer/>  */}
-      {/* <Antiminer/> */}
-    </>
+    <Routes>
+      <Route path="/" element={<Homepage />}/>
+      <Route path="cloud-mining" element={<CloudMining />}/>
+    </Routes> 
   );
 }
 
